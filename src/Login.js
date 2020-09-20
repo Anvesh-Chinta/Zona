@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import './Login.css'
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { auth } from "./firebase";
 
 function Login() {
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -20,7 +21,9 @@ function Login() {
             .createUserWithEmailAndPassword(email, password)
             .then((auth) => {
                 //successfully created a new user with email and password
-                console.log(auth);
+                if(auth){
+                    history.push('/')
+                }
             })
             .catch(error => alert(error.message))
         //some fancy firebase stuff happens here
