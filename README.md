@@ -59,6 +59,23 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ma
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
+#### Deploy Process 
+In Terminal, 
+Globally install firebasse tools if not done earlier:: sudo npm i -g firebase-tools
+To select firebase function to be performed:: firebase init,
+Login to Firebase Account:: firebase login
+(select Account and existing project),
+To update the changes:: npm run build,
+Deploy and obtain Hosting URL:: firebase deploy
+
+Project Console: https://console.firebase.google.com/project/zona-87983/overview
+Hosting URL: https://zona-87983.web.app
+
+# Everytime any changes are made
+
+To update the changes:: npm run build,
+Deploy and obtain Hosting URL:: firebase deploy
+
 ### Deployment
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
